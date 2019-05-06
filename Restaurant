@@ -1,0 +1,42 @@
+class Restaurant:
+    static_val = 'Static'
+
+    def __init__(self, name = 'Ресторан', dish_count_in_menu = 80, adress = 'Шевченка 16', count_of_tables = 20,
+                 count_of_stars = 4, count_of_floors = 3, count_of_visitors_per_day = 240):
+        self.name = name
+        self.dish_count_in_menu = dish_count_in_menu
+        self.adress = adress
+        self.count_of_tables = count_of_tables
+        self.count_of_stars = count_of_stars
+        self.count_of_floors = count_of_floors
+        self.count_of_visitors_per_day = count_of_visitors_per_day
+
+    def __del__(self):
+        print('Деструктор')
+
+    def RestaurantInf(self):
+        print('Назва: ' + self.name,'\nКількість страв в меню: ' + str(self.dish_count_in_menu),'\nАдреса: ' + self.adress,
+              '\nКількість столів: ' + str(self.count_of_tables), '\nКількість зірок: ' + str(self.count_of_stars),
+              '\nКількість поверхів: ' + str(self.count_of_floors), '\nКількість відвідувачів за день: '
+              + str(self.count_of_visitors_per_day) + "\n")
+
+    @staticmethod
+    def Get_static_val():
+        return self.static_val
+
+def main():
+        restaurant1 = Restaurant("Коктебель", 70, "Івана Франка 18", 30, 5, 2, 300)
+        restaurant2 = Restaurant("Кебаб шеф", 10, "Вашингтона 25а", 15, 5, 1, 400)
+        restaurant3 = Restaurant("СушиЯ", 50, "Липинського 4", 20, 3, 2, 250)
+        restaurant1.RestaurantInf()
+        restaurant2.RestaurantInf()
+        restaurant3.RestaurantInf()
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
